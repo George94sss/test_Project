@@ -7,7 +7,7 @@ export default {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
     return {
       titleTemplate: "%s",
-      title: "MaryLand",
+      title: "Test",
       htmlAttrs: {
         ...i18nHead.htmlAttrs,
       },
@@ -50,7 +50,7 @@ export default {
     "@nuxtjs/auth-next",
   ],
   axios: {
-    baseURL: "http://10.192.1.52:3000/api",
+    baseURL: "http://someUrl/api",
   },
   auth: {
     redirect: {

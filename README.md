@@ -1,5 +1,4 @@
-# test_maryland
+# Test
 
 Тестовый проект
-Оригинал с которого мы делали копию site@maryland-ltd.com
-
+Оригинал с которого мы делали копию site@Test-ltd.com

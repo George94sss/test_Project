@@ -2,7 +2,7 @@
   <td>
     <img
       style="width: 100px"
-      :src="`http://10.192.1.52:3000/api${img.image_path}`"
+      :src="`http://someUrl/api${img.image_path}`"
       alt=""
     />
   </td>

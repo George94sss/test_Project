@@ -4,7 +4,7 @@
     <span class="login100-form-title p-b-48">
       <img
         style="height: 7vw !important"
-        src="https://maryland-ltd.com/uploads/logo-black.svg"
+        src="https://Test.com/uploads/logo-black.svg"
         alt=""
       />
     </span>

@@ -43,7 +43,7 @@ export default {
         {
           name: "keywords",
           content:
-            "Maryland, Himiýa, Химия, Himiya, Turkmenistan, Tm, Туркменистан, ТМ",
+            "Test, Himiýa, Химия, Himiya, Turkmenistan, Tm, Туркменистан, ТМ",
         },
         {
           name: "author",

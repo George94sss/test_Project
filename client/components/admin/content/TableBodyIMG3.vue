@@ -2,7 +2,7 @@
   <td align="center" class="td-it">
     <img
       style="width: 100px"
-      :src="`http://10.192.1.52:3000/api${img[keyImage]}`"
+      :src="`http://someUrl/api${img[keyImage]}`"
       alt=""
     />
   </td>

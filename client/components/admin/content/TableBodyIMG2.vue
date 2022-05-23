@@ -1,10 +1,6 @@
 <template>
   <td align="center" class="td-it">
-    <img
-      style="width: 100px"
-      :src="`http://10.192.1.52:3000/api${img[num]}`"
-      alt=""
-    />
+    <img style="width: 100px" :src="`http://someUrl/api${img[num]}`" alt="" />
   </td>
 </template>
 

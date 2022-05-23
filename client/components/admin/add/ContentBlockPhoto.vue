@@ -100,7 +100,7 @@ export default {
       console.log(this.img);
       if (typeof this.img == "string") {
         console.log("sss", typeof this.img);
-        this.url = "http://10.192.1.52:3000/api";
+        this.url = "http://someUrl/api";
         this.image = await this.img;
         console.log("UPS 1");
       } else if (typeof this.img == "object" && this.img !== null) {

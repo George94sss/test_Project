@@ -6,31 +6,31 @@ const AuthenticatorResponse = ({ commit }, data) => {
 //Take or Check token and use it
 const fetchAuthToken = ({ commit }) => {
   let token = window.localStorage["auth._token.local"];
-//   console.log(token);
+  //   console.log(token);
   commit("setAuthToken", token);
 };
 
 const fetchPassToken = ({ commit }) => {
   let token = window.localStorage["auth._token.local2"];
-//   console.log("TOKEN", token);
+  //   console.log("TOKEN", token);
   commit("setPassToken", token);
 };
 
 const fetchDates = async ({ commit, getters }, url) => {
   try {
-   //  console.log("fuck", getters.getAuthToken);
+    //  console.log("fuck", getters.getAuthToken);
     let token = getters.getAuthToken;
-    let dates = await axios.get(`http://10.192.1.52:3000/api/admin/${url}`, {
+    let dates = await axios.get(`http://someUrl/api/admin/${url}`, {
       headers: {
         Authorization: getters.getAuthToken,
       },
     });
-   //  console.log(dates);
+    //  console.log(dates);
     commit("setDates", dates.data);
-   //  console.log("fuck", dates);
-   //  console.log("GET", getters.setDates);
+    //  console.log("fuck", dates);
+    //  console.log("GET", getters.setDates);
   } catch (err) {
-   //  console.log(err);
+    //  console.log(err);
   }
 };
 
@@ -39,17 +39,13 @@ const deleteOrCreateOrUpdateOneData = async (
   { url, data }
 ) => {
   try {
-    let some = await axios.post(
-      `http://10.192.1.52:3000/api/admin/${url}`,
-      data,
-      {
-        headers: {
-          Authorization: getters.getAuthToken,
-        },
-      }
-    );
+    let some = await axios.post(`http://someUrl/api/admin/${url}`, data, {
+      headers: {
+        Authorization: getters.getAuthToken,
+      },
+    });
   } catch (err) {
-   //  console.log("ERR", err);
+    //  console.log("ERR", err);
   }
 };
 
@@ -59,7 +55,7 @@ const deleteOrCreateOrUpdateOneData2 = async (
 ) => {
   try {
     let some = await axios.post(
-      // `http://10.192.1.52:3000/api/login/${url}`,
+      // `http://someUrl/api/login/${url}`,
       data,
       {
         headers: {
@@ -68,22 +64,22 @@ const deleteOrCreateOrUpdateOneData2 = async (
       }
     );
   } catch (err) {
-   //  console.log("ERR", err);
+    //  console.log("ERR", err);
   }
 };
 
 const fetchGetOneData = async ({ commit, getters }, { url }) => {
   try {
-    let data = await axios.get(`http://10.192.1.52:3000/api/admin/${url}`, {
+    let data = await axios.get(`http://someUrl/api/admin/${url}`, {
       headers: {
         Authorization: getters.getAuthToken,
       },
     });
     commit("setGetteredDates", data);
-   //  console.log("HHHH", data);
+    //  console.log("HHHH", data);
     //  this.forInDates(data);
   } catch (e) {
-   //  console.log(e);
+    //  console.log(e);
   }
 };
 
@@ -99,7 +95,7 @@ const fetchGetOneData = async ({ commit, getters }, { url }) => {
 const collectCategoriesId = async ({ commit }, { categories_id }) => {
   let arr = categories_id;
   let arr2 = [];
-//   console.log("FFF", categories_id);
+  //   console.log("FFF", categories_id);
   let obj1 = new Object();
   obj1.categories_id = new Number();
   obj1.title = new Number();
@@ -149,10 +145,10 @@ const sortedImgArray = async ({ commit, getters }) => {
       obj2 = obj1;
     }
     // this.arr = arr2;
-   //  console.log("ARR", this.arr);
+    //  console.log("ARR", this.arr);
   }
   commit("setImgArray", arr2);
-//   console.log("ARR", arr2);
+  //   console.log("ARR", arr2);
 };
 
 export default {
